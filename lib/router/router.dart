@@ -1,23 +1,22 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
-import 'package:demo/pages/group_screens/group_screen.dart';
-import 'package:demo/pages/group_screens/tab1_screen.dart';
-import 'package:demo/pages/group_screens/tab2_screen.dart';
-import 'package:demo/pages/group_screens/tab3_screen.dart';
-import 'package:demo/pages/home_screen/home_screen.dart';
+import 'package:demo/pages/code_screens/code_screen.dart';
+import 'package:demo/pages/code_screens/tab1_screen.dart';
+import 'package:demo/pages/code_screens/tab2_screen.dart';
+import 'package:demo/pages/code_screens/tab3_screen.dart';
 import 'package:demo/pages/login_screens/login_screen.dart';
 import 'package:demo/pages/login_screens/signup_screen.dart';
-import 'package:demo/pages/user_screens/user_details_screen.dart';
-import 'package:demo/pages/user_screens/user_friends_screen.dart';
-import 'package:demo/pages/user_screens/user_profile_screen.dart';
-import 'package:demo/pages/user_screens/user_screen.dart';
+import 'package:demo/pages/main_screen/user_details_screen.dart';
+import 'package:demo/pages/main_screen/user_friends_screen.dart';
+import 'package:demo/pages/main_screen/user_profile_screen.dart';
+import 'package:demo/pages/main_screen/user_screen.dart';
 
 /*https://gbaccetta.medium.com/complex-flutter-navigation-with-nested-routers-and-bottom-bar-navigation-made-easy-with-7f546d33fc4d*/
 
-@MaterialAutoRouter(
+@AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route,Screen',
   routes: <AutoRoute>[
-    //authentication routes
+    //authentification routes
     AutoRoute(
       initial: true,
       path: '/login',
@@ -40,12 +39,11 @@ import 'package:demo/pages/user_screens/user_screen.dart';
       page: UserScreen,
       children: [
         AutoRoute(path: '', page: UserProfileScreen),
-        AutoRoute(path: 'home/*', page: HomeScreen),
-        AutoRoute(path: 'details/*', page: UserDetailsScreen),
-        AutoRoute(path: 'friends/*', page: UserFriendsScreen),
+        AutoRoute(path: 'details', page: UserDetailsScreen),
+        AutoRoute(path: 'friends', page: UserFriendsScreen),
         groupTabRouter,
         // redirect all other paths
-        RedirectRoute(path: '*', redirectTo: ''),
+        RedirectRoute(path: '*', redirectTo: 'profile'),
       ],
     ),
 
@@ -59,7 +57,7 @@ class $AppRouter {}
 //nested group route with a tab router
 const groupTabRouter = AutoRoute(
   path: 'group/:id',
-  page: GroupScreen,
+  page: CodeScreen,
   children: [
     AutoRoute(
       path: 'tab1',

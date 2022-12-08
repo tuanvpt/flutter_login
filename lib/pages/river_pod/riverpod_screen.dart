@@ -10,8 +10,8 @@ import '../state_notifier_provider_page.dart';
 import '../state_provider_page.dart';
 import '../stream_provider_page.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class RiverpodScreen extends StatelessWidget {
+  const RiverpodScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

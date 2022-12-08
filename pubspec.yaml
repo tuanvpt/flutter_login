@@ -48,7 +48,9 @@ dependencies:
 
   flex_color_scheme: ^6.1.1
 
-  simple_animations: ^4.1.0
+  simple_animations: ^5.0.0+3
+
+  flutter_svg: ^1.1.6
 
 
 

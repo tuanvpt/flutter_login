@@ -3,10 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo/router/router.gr.dart';
 import 'package:flutter/material.dart';
 
-class GroupScreen extends StatelessWidget {
+class CodeScreen extends StatelessWidget {
   final String id;
 
-  const GroupScreen({super.key, @PathParam('id') required this.id});
+  const CodeScreen({super.key, @PathParam('id') required this.id});
 
   @override
   Widget build(BuildContext context) {

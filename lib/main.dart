@@ -14,7 +14,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: FlexThemeData.light(scheme: FlexScheme.bigStone),
+      theme: FlexThemeData.light(scheme: FlexScheme.materialBaseline),
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.mandyRed),
       themeMode: ThemeMode.system,
       routeInformationParser: _appRouter.defaultRouteParser(),

@@ -29,6 +29,20 @@ class UserDetailsScreen extends StatelessWidget {
                 'Back to user',
               ),
             ),
+            ElevatedButton(
+              onPressed: () =>
+                  context.router.root.replaceAll([UserFriendsScreenRoute()]),
+              child: Text(
+                'User friend',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () =>
+                  context.router.root.replaceAll([LoginScreenRoute()]),
+              child: Text(
+                'LOGOUT',
+              ),
+            ),
           ],
         ),
       ),
