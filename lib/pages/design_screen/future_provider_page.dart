@@ -1,9 +1,9 @@
 import 'package:demo/models/suggestion.dart';
+import 'package:demo/services/ApiService.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../services/ApiService.dart';
 
 final valueStateProvider = FutureProvider.autoDispose<Suggestion>((ref) async {
   final apiService = ref.watch(apiServiceProvider);

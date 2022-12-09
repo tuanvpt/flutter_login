@@ -1,23 +1,23 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:demo/pages/provider_page.dart';
+import 'package:demo/pages/design_screen/future_provider_page.dart';
+import 'package:demo/pages/design_screen/provider_page.dart';
+import 'package:demo/pages/design_screen/stream_provider_page.dart';
 import 'package:demo/router/router.gr.dart';
 import 'package:demo/widgets/re_button.dart';
 import 'package:flutter/material.dart';
 
-import '../change_notifier_provider_page.dart';
-import '../future_provider_page.dart';
-import '../state_notifier_provider_page.dart';
-import '../state_provider_page.dart';
-import '../stream_provider_page.dart';
+import 'change_notifier_provider_page.dart';
+import 'state_notifier_provider_page.dart';
+import 'state_provider_page.dart';
 
-class RiverpodScreen extends StatelessWidget {
-  const RiverpodScreen({super.key});
+class DesignScreen extends StatelessWidget {
+  const DesignScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: Text('Design Screen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

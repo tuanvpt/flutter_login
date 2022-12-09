@@ -27,13 +27,9 @@ class CustomCategoryCard extends StatelessWidget {
                 if(HomePageCategoryJson[index]['title'] =="Code"){
                   context.router.push(CodeScreenRoute(id: '1'));
                 } else if(HomePageCategoryJson[index]['title'] =="Design"){
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text("Design"),
-                  ));
+                  context.pushRoute(DesignScreenRoute());
                 }else{
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text("Business"),
-                  ));
+                  context.router.push(BussinessScreenRoute());
                 }
               },
               child: Container(
