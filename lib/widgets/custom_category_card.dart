@@ -19,17 +19,15 @@ class CustomCategoryCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(HomePageCategoryJson.length, (index) {
           return GestureDetector(
-            onTap: () {
-            
-            },
+            onTap: () {},
             child: InkWell(
-              onTap: (){
-                if(HomePageCategoryJson[index]['title'] =="Code"){
+              onTap: () {
+                if (HomePageCategoryJson[index]['title'] == "Code") {
                   context.router.push(CodeScreenRoute(id: '1'));
-                } else if(HomePageCategoryJson[index]['title'] =="Design"){
+                } else if (HomePageCategoryJson[index]['title'] == "Design") {
                   context.pushRoute(DesignScreenRoute());
-                }else{
-                  context.router.push(BussinessScreenRoute());
+                } else {
+                  context.router.push(FlashCardScreenRoute());
                 }
               },
               child: Container(

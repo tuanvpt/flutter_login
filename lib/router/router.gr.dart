@@ -13,12 +13,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i14;
 import 'package:auto_route/empty_router_widgets.dart' as _i10;
-import 'package:demo/pages/business_screen/bussiness_screens.dart' as _i8;
 import 'package:demo/pages/code_screens/code_screen.dart' as _i9;
 import 'package:demo/pages/code_screens/tab1_screen.dart' as _i11;
 import 'package:demo/pages/code_screens/tab2_screen.dart' as _i12;
 import 'package:demo/pages/code_screens/tab3_screen.dart' as _i13;
 import 'package:demo/pages/design_screen/design_screen.dart' as _i7;
+import 'package:demo/pages/flashcard_screen/flashcard_screens.dart' as _i8;
 import 'package:demo/pages/login_screens/login_screen.dart' as _i1;
 import 'package:demo/pages/login_screens/signup_screen.dart' as _i2;
 import 'package:demo/pages/main_screen/user_details_screen.dart' as _i5;
@@ -75,10 +75,10 @@ class AppRouter extends _i14.RootStackRouter {
         child: const _i7.DesignScreen(),
       );
     },
-    BussinessScreenRoute.name: (routeData) {
+    FlashCardScreenRoute.name: (routeData) {
       return _i14.AdaptivePage<dynamic>(
         routeData: routeData,
-        child: const _i8.BussinessScreen(),
+        child: const _i8.FlashCardScreen(),
       );
     },
     CodeScreenRoute.name: (routeData) {
@@ -190,7 +190,7 @@ class AppRouter extends _i14.RootStackRouter {
               parent: UserScreenRoute.name,
             ),
             _i14.RouteConfig(
-              BussinessScreenRoute.name,
+              FlashCardScreenRoute.name,
               path: 'design',
               parent: UserScreenRoute.name,
             ),
@@ -364,15 +364,15 @@ class DesignScreenRoute extends _i14.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.BussinessScreen]
-class BussinessScreenRoute extends _i14.PageRouteInfo<void> {
-  const BussinessScreenRoute()
+/// [_i8.FlashCardScreen]
+class FlashCardScreenRoute extends _i14.PageRouteInfo<void> {
+  const FlashCardScreenRoute()
       : super(
-          BussinessScreenRoute.name,
+          FlashCardScreenRoute.name,
           path: 'design',
         );
 
-  static const String name = 'BussinessScreenRoute';
+  static const String name = 'FlashCardScreenRoute';
 }
 
 /// generated route for

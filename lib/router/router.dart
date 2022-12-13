@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
-import 'package:demo/pages/business_screen/bussiness_screens.dart';
 import 'package:demo/pages/code_screens/code_screen.dart';
 import 'package:demo/pages/code_screens/tab1_screen.dart';
 import 'package:demo/pages/code_screens/tab2_screen.dart';
 import 'package:demo/pages/code_screens/tab3_screen.dart';
 import 'package:demo/pages/design_screen/design_screen.dart';
+import 'package:demo/pages/flashcard_screen/flashcard_screens.dart';
 import 'package:demo/pages/login_screens/login_screen.dart';
 import 'package:demo/pages/login_screens/signup_screen.dart';
 import 'package:demo/pages/main_screen/user_details_screen.dart';
@@ -44,7 +44,7 @@ import 'package:demo/pages/main_screen/user_screen.dart';
         AutoRoute(path: 'details', page: UserDetailsScreen),
         AutoRoute(path: 'friends', page: UserFriendsScreen),
         AutoRoute(path: 'design', page: DesignScreen),
-        AutoRoute(path: 'design', page: BussinessScreen),
+        AutoRoute(path: 'design', page: FlashCardScreen),
         groupTabRouter,
         // redirect all other paths
         RedirectRoute(path: '*', redirectTo: 'profile'),
