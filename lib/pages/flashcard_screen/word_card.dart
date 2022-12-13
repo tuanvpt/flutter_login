@@ -1,5 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo/models/profile.dart';
+import 'package:demo/utils/extension/image_etx.dart';
 import 'package:demo/widgets/action_button_widget.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
@@ -38,25 +38,7 @@ class WordCard extends StatelessWidget {
                     profile.imageAsset,
                     fit: BoxFit.fitHeight,
                   ),*/
-                  child: CachedNetworkImage(
-                    imageUrl: vocabulary.imageAsset,
-                    imageBuilder: (context, imageProvider) => Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: imageProvider,
-                          fit: BoxFit.fitHeight,
-                        ),
-                      ),
-                    ),
-                    progressIndicatorBuilder:
-                        (context, url, downloadProgress) =>
-                            Center(
-                              child: CircularProgressIndicator(
-                                  value: downloadProgress.progress),
-                            ),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
-                  ),
+                  child: buildImage(vocabulary.imageAsset),
                 ),
               ),
               Positioned(

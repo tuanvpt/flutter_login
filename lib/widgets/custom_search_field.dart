@@ -41,7 +41,7 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
             alignment: Alignment.center,
             child: Container(
               child: SvgPicture.asset(
-                '${assetImg}search_icon.svg',
+                '${Constants.assetImg}search_icon.svg',
                 color: secondary.withOpacity(0.5),
                 height: 15.0,
               ),
@@ -85,7 +85,7 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
             ),
             child: Container(
               child: SvgPicture.asset(
-                '${assetImg}filter_icon.svg',
+                '${Constants.assetImg}filter_icon.svg',
                 color: textWhite,
                 height: 13.0,
               ),
