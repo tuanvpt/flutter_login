@@ -1,5 +1,5 @@
 import 'package:demo/models/suggestion.dart';
-import 'package:demo/services/ApiService.dart';
+import 'package:demo/services/api_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

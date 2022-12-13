@@ -1,9 +1,12 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo/gen/assets.gen.dart';
 import 'package:demo/router/router.gr.dart';
+import 'package:demo/utils/resource/color_app.dart';
+import 'package:demo/utils/resource/string_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class LoginScreen extends ConsumerWidget  {
+class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   @override
@@ -16,9 +19,11 @@ class LoginScreen extends ConsumerWidget  {
             Container(
               height: 370,
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/images/background.png'),
-                      fit: BoxFit.fill)),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/background.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
               child: Stack(
                 children: <Widget>[
                   Positioned(
@@ -28,7 +33,7 @@ class LoginScreen extends ConsumerWidget  {
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage('assets/images/light-1.png'))),
+                              image: AssetImage(Assets.images.light1.path))),
                     ),
                   ),
                   Positioned(
@@ -38,7 +43,7 @@ class LoginScreen extends ConsumerWidget  {
                     child: Container(
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage('assets/images/light-2.png'))),
+                              image: AssetImage(Assets.images.light2.path))),
                     ),
                   ),
                   Positioned(
@@ -49,14 +54,14 @@ class LoginScreen extends ConsumerWidget  {
                       child: Container(
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage('assets/images/clock.png'))),
+                                image: AssetImage(Assets.images.clock.path))),
                       )),
                   Positioned(
                       child: Container(
                     margin: EdgeInsets.only(top: 50),
                     child: Center(
                       child: Text(
-                        "Login",
+                        StringApp.login,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 40,
@@ -99,12 +104,12 @@ class LoginScreen extends ConsumerWidget  {
                       onPressed: () {
                         context.router.replace(UserScreenRoute());
                       },
-                      color: Color.fromRGBO(143, 148, 251, 1),
+                      color: ColorApp.color_143_148_251,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
-                      child: Text(
-                        "Login",
+                      child: const Text(
+                        StringApp.login,
                         style: TextStyle(
                             fontWeight: FontWeight.w600, fontSize: 18),
                       ),
@@ -113,9 +118,9 @@ class LoginScreen extends ConsumerWidget  {
                   SizedBox(
                     height: 70,
                   ),
-                  Text(
-                    "Forgot Password?",
-                    style: TextStyle(color: Color.fromRGBO(143, 148, 251, 1)),
+                  const Text(
+                    StringApp.forgot_password,
+                    style: TextStyle(color: ColorApp.color_143_148_251),
                   ),
                   SizedBox(
                     height: 30,
@@ -128,12 +133,12 @@ class LoginScreen extends ConsumerWidget  {
                         onTap: () {
                           context.router.push(SignupScreenRoute());
                         },
-                        child: Text(
-                          "Sign up",
+                        child: const Text(
+                          StringApp.sing_up,
                           style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
-                              color: Color.fromRGBO(143, 148, 251, 1)),
+                              color: ColorApp.color_143_148_251),
                         ),
                       ),
                     ],
